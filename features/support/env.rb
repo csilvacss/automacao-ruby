@@ -2,7 +2,7 @@
 require 'capybara/cucumber'
 require 'capybara/rspec'
 require 'selenium-webdriver'
-require 'site-prism'
+require 'site_prism'
 require 'pry'
 
 Capybara.configure do |config|
