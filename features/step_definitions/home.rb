@@ -10,12 +10,15 @@ Quando('clico no menu {string}') do |sobre_nos|
     home.click_button(sobre_nos)
 end
 
+Entao ('devo visualizar a informação {string}') do |titleSobreNos|
+    home.validate_text_home(titleSobreNos)
+end
 
 
 # Entao ('devo visualizar a informação {string}') do |text_home_feature|
 #     home.validate_text_home(text_home_feature)
 # end
 
-# # Quando('clico no menu {string}') do |menu|
-# #     home.click_menu_link(menu)
+# Quando('clico no menu {string}') do |menu|
+#     home.click_menu_link(menu)
 # end

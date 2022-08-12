@@ -20,7 +20,6 @@ class Home < SitePrism::Page
     end
 
     def click_button(sobre_nos)
-        #binding.pry
         btnSobreNos.click()
     end
     
@@ -31,12 +30,14 @@ class Home < SitePrism::Page
             if el_title_HomePage.text.eql?(text_home_feature) != true
                 raise "Expect element: #{text_home_feature}, but returned: #{el_title_HomePage.text}"
             end
-        elsif
+        end
+        
+        if
             el_title_HomePage = find('a[href="/#sobre-nos"]')
             
             if el_title_HomePage.text.eql?(text_home_feature) != true
                 raise "Expect element: #{text_home_feature}, but returned: #{el_title_HomePage.text}"
-            end        
+            end     
        end
     end
     
