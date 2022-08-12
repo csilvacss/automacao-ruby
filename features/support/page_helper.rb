@@ -6,7 +6,7 @@ module Pages
         @home ||= Home.new
     end
 
-    def login
-        @login ||= Login.new
-    end
+    #def login
+     #   @login ||= Login.new
+    #end
 end
