@@ -23,27 +23,28 @@ class Home < SitePrism::Page
         #binding.pry
         btnSobreNos.click()
     end
+    
+    def validete_text_home(text_home_feature)
+        if text_home_feature == "Aprenda na prática."
+            el_title_HomePage = find('div[class="title"]')
 
-    # def validete_text_home(text_home_feature)
-    #     if text_home_feature == "Aprenda na prática."
-    #         el_title_HomePage = find('div[class="title"]')
-
-    #         if el_title_HomePage.text.eql?(text_home_feature) != true
-    #             raise "Expect element: #{text_home_feature}, but returned: #{el_title_HomePage.text}"
-    #         end
-    #     elsif
-    #         el_title_HomePage = find('a[href="/#sobre-nos"]')
+            if el_title_HomePage.text.eql?(text_home_feature) != true
+                raise "Expect element: #{text_home_feature}, but returned: #{el_title_HomePage.text}"
+            end
+        elsif
+            el_title_HomePage = find('a[href="/#sobre-nos"]')
             
-    #         if el_title_HomePage.text.eql?(text_home_feature) != true
-    #             raise "Expect element: #{text_home_feature}, but returned: #{el_title_HomePage.text}"
-    #         end        
-    #    end
-    # end
-    # def click_menu_link(menu)
-    #     if menu == "sobre_nos"
-    #         btnSobreNos.click()
-    #     elsif menu == "Depoimentos"
-    #         btnDepoimentos.click()
-    #     end
-    # end
+            if el_title_HomePage.text.eql?(text_home_feature) != true
+                raise "Expect element: #{text_home_feature}, but returned: #{el_title_HomePage.text}"
+            end        
+       end
+    end
+    
+    def click_menu_link(menu)
+        if menu == "sobre_nos"
+            btnSobreNos.click()
+        elsif menu == "Depoimentos"
+            btnDepoimentos.click()
+        end
+    end
 end
