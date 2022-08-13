@@ -13,5 +13,4 @@ After do |scenario|
     else
         print_screen(scenario_name.downcase!, 'Success')
     end
-
 end
